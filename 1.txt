@@ -1,0 +1,1338 @@
+Target:
+.global Obj_construct
+Obj_construct:
+/* 8081F828 9421FFA0 */ stwu        r1, -0x60(r1)
+/* 8081F82C 7C0802A6 */ mflr        r0
+/* 8081F830 3CA0808D */ lis         r5, lbl_808d6ecc@ha
+/* 8081F834 38C00000 */ li          r6, 0x0
+/* 8081F838 90010064 */ stw         r0, 0x64(r1)
+/* 8081F83C 38A56ECC */ addi        r5, r5, lbl_808d6ecc@l
+/* 8081F840 3800FFFF */ li          r0, -0x1
+/* 8081F844 93E1005C */ stw         r31, 0x5c(r1)
+/* 8081F848 3BE00001 */ li          r31, 0x1
+/* 8081F84C 93C10058 */ stw         r30, 0x58(r1)
+/* 8081F850 7C9E2378 */ mr          r30, r4
+/* 8081F854 93A10054 */ stw         r29, 0x54(r1)
+/* 8081F858 7C7D1B78 */ mr          r29, r3
+/* 8081F85C 90A30000 */ stw         r5, 0(r3)
+/* 8081F860 90C30004 */ stw         r6, 4(r3)
+/* 8081F864 90C30014 */ stw         r6, 0x14(r3)
+/* 8081F868 80A40000 */ lwz         r5, 0(r4)
+/* 8081F86C A0A50000 */ lhz         r5, 0(r5)
+/* 8081F870 B0A30088 */ sth         r5, 0x88(r3)
+/* 8081F874 98C30099 */ stb         r6, 0x99(r3)
+/* 8081F878 98C3009A */ stb         r6, 0x9a(r3)
+/* 8081F87C 98C3009B */ stb         r6, 0x9b(r3)
+/* 8081F880 98C3009C */ stb         r6, 0x9c(r3)
+/* 8081F884 9BE3009D */ stb         r31, 0x9d(r3)
+/* 8081F888 908300A0 */ stw         r4, 0xa0(r3)
+/* 8081F88C 900300A4 */ stw         r0, 0xa4(r3)
+/* 8081F890 9BE300A8 */ stb         r31, 0xa8(r3)
+/* 8081F894 38630058 */ addi        r3, r3, 0x58
+/* 8081F898 4BA1022D */ bl          makeIdentity__Q23EGG9Matrix34fFv
+/* 8081F89C 809E0000 */ lwz         r4, 0(r30)
+/* 8081F8A0 3C60808B */ lis         r3, lbl_808abaa4@ha
+/* 8081F8A4 A01D002C */ lhz         r0, 0x2c(r29)
+/* 8081F8A8 C0240018 */ lfs         f1, 0x18(r4)
+/* 8081F8AC C0440014 */ lfs         f2, 0x14(r4)
+/* 8081F8B0 6000000B */ ori         r0, r0, 0xb
+/* 8081F8B4 C003BAA4 */ lfs         f0, lbl_808abaa4@l(r3)
+/* 8081F8B8 C0640010 */ lfs         f3, 0x10(r4)
+/* 8081F8BC ED210032 */ fmuls       f9, f1, f0
+/* 8081F8C0 C084000C */ lfs         f4, 0xc(r4)
+/* 8081F8C4 ED420032 */ fmuls       f10, f2, f0
+/* 8081F8C8 C0A40008 */ lfs         f5, 8(r4)
+/* 8081F8CC ED630032 */ fmuls       f11, f3, f0
+/* 8081F8D0 C0040004 */ lfs         f0, 4(r4)
+/* 8081F8D4 C0C40024 */ lfs         f6, 0x24(r4)
+/* 8081F8D8 C0E40020 */ lfs         f7, 0x20(r4)
+/* 8081F8DC C104001C */ lfs         f8, 0x1c(r4)
+/* 8081F8E0 D0610020 */ stfs        f3, 0x20(r1)
+/* 8081F8E4 D0410024 */ stfs        f2, 0x24(r1)
+/* 8081F8E8 D0210028 */ stfs        f1, 0x28(r1)
+/* 8081F8EC D1610008 */ stfs        f11, 8(r1)
+/* 8081F8F0 D141000C */ stfs        f10, 0xc(r1)
+/* 8081F8F4 D1210010 */ stfs        f9, 0x10(r1)
+/* 8081F8F8 D161002C */ stfs        f11, 0x2c(r1)
+/* 8081F8FC D1410030 */ stfs        f10, 0x30(r1)
+/* 8081F900 D1210034 */ stfs        f9, 0x34(r1)
+/* 8081F904 D0010038 */ stfs        f0, 0x38(r1)
+/* 8081F908 D0A1003C */ stfs        f5, 0x3c(r1)
+/* 8081F90C D0810040 */ stfs        f4, 0x40(r1)
+/* 8081F910 D1010014 */ stfs        f8, 0x14(r1)
+/* 8081F914 D0E10018 */ stfs        f7, 0x18(r1)
+/* 8081F918 D0C1001C */ stfs        f6, 0x1c(r1)
+/* 8081F91C D01D0030 */ stfs        f0, 0x30(r29)
+/* 8081F920 D0BD0034 */ stfs        f5, 0x34(r29)
+/* 8081F924 D09D0038 */ stfs        f4, 0x38(r29)
+/* 8081F928 9BFD0054 */ stb         r31, 0x54(r29)
+/* 8081F92C D17D0048 */ stfs        f11, 0x48(r29)
+/* 8081F930 D15D004C */ stfs        f10, 0x4c(r29)
+/* 8081F934 D13D0050 */ stfs        f9, 0x50(r29)
+/* 8081F938 B01D002C */ sth         r0, 0x2c(r29)
+/* 8081F93C D11D003C */ stfs        f8, 0x3c(r29)
+/* 8081F940 D0FD0040 */ stfs        f7, 0x40(r29)
+/* 8081F944 D0DD0044 */ stfs        f6, 0x44(r29)
+/* 8081F948 4BCFC589 */ bl          getGameScene
+/* 8081F94C 7C641B78 */ mr          r4, r3
+/* 8081F950 38600024 */ li          r3, 0x24
+/* 8081F954 80840C98 */ lwz         r4, 0xc98(r4)
+/* 8081F958 38A00004 */ li          r5, 0x4
+/* 8081F95C 4BA0A4A9 */ bl          __nwa__FUlPQ23EGG4Heapi
+/* 8081F960 907D0028 */ stw         r3, 0x28(r29)
+/* 8081F964 4BCFC56D */ bl          getGameScene
+/* 8081F968 7C641B78 */ mr          r4, r3
+/* 8081F96C 38600024 */ li          r3, 0x24
+/* 8081F970 80840C98 */ lwz         r4, 0xc98(r4)
+/* 8081F974 38A00004 */ li          r5, 0x4
+/* 8081F978 4BA0A48D */ bl          __nwa__FUlPQ23EGG4Heapi
+/* 8081F97C 907D008C */ stw         r3, 0x8c(r29)
+/* 8081F980 4BCFC551 */ bl          getGameScene
+/* 8081F984 7C641B78 */ mr          r4, r3
+/* 8081F988 38600024 */ li          r3, 0x24
+/* 8081F98C 80840C98 */ lwz         r4, 0xc98(r4)
+/* 8081F990 38A00004 */ li          r5, 0x4
+/* 8081F994 4BA0A471 */ bl          __nwa__FUlPQ23EGG4Heapi
+/* 8081F998 907D0094 */ stw         r3, 0x94(r29)
+/* 8081F99C 7FA3EB78 */ mr          r3, r29
+/* 8081F9A0 83E1005C */ lwz         r31, 0x5c(r1)
+/* 8081F9A4 83C10058 */ lwz         r30, 0x58(r1)
+/* 8081F9A8 83A10054 */ lwz         r29, 0x54(r1)
+/* 8081F9AC 80010064 */ lwz         r0, 0x64(r1)
+/* 8081F9B0 7C0803A6 */ mtlr        r0
+/* 8081F9B4 38210060 */ addi        r1, r1, 0x60
+/* 8081F9B8 4E800020 */ blr         
+Context:
+/* #line 1 "GeoObject.hpp" */	/* stack depth 0 */
+/* #line 1 "(C-C++ Preprocessor Panel)" */	/* stack depth 1 */
+/* #line 1 "(command-line defines)" */	/* stack depth 2 */
+/* #line 1 "(C-C++ Preprocessor Panel)" */	/* stack depth 1 */
+/* #line 1 "GeoObject.hpp" */	/* stack depth 0 */
+/* #line 1 "rk_types.h" */	/* stack depth 1 */
+/* #line 1 "stdint.h" */	/* stack depth 2 */
+typedef unsigned long long uint64_t;
+typedef signed long long int64_t;
+typedef unsigned long uint32_t;
+typedef signed long int32_t;
+typedef unsigned short uint16_t;
+typedef signed short int16_t;
+typedef unsigned char uint8_t;
+typedef signed char int8_t;
+/* #line 3 "rk_types.h" */	/* stack depth 1 */
+typedef int unk32;
+typedef short unk16;
+typedef unsigned char unk8;
+typedef unk32 unk;
+typedef int8_t s8;
+typedef int16_t s16;
+typedef int32_t s32;
+typedef int64_t s64;
+typedef uint8_t u8;
+typedef uint16_t u16;
+typedef uint32_t u32;
+typedef uint64_t u64;
+typedef unsigned long size_t;
+typedef volatile u8 vu8;
+typedef volatile u16 vu16;
+typedef volatile u32 vu32;
+typedef volatile u64 vu64;
+typedef volatile s8 vs8;
+typedef volatile s16 vs16;
+typedef volatile s32 vs32;
+typedef volatile s64 vs64;
+typedef float f32;
+typedef double f64;
+typedef volatile f32 vf32;
+typedef volatile f64 vf64;
+inline u32 min32(u32 a, u32 b) { return a <= b ? a : b; }
+class NonCopyable {
+public:
+  inline NonCopyable() {}
+private:
+  inline NonCopyable(const NonCopyable&) {}
+};
+/* #line 3 "GeoObject.hpp" */	/* stack depth 0 */
+/* #line 1 "decomp.h" */	/* stack depth 1 */
+struct __mkw_patch {
+  void* ptr;
+  unsigned int len;
+  unsigned long long val;
+};
+typedef struct ps_f32 {
+  f32 f0;
+  f32 f1;
+} ps_f32;
+void __dummy_str(const char*);
+void __dummy_float(float);
+void __dummy_double(double);
+void __dummy_pointer(const void*);
+typedef struct {
+  unsigned long addr;
+  const void* ref;
+} __RelSymbolDef;
+/* #line 1 "eabi.h" */	/* stack depth 2 */
+extern "C" {
+extern void _savegpr_14(void);
+extern void _savegpr_15(void);
+extern void _savegpr_16(void);
+extern void _savegpr_17(void);
+extern void _savegpr_18(void);
+extern void _savegpr_19(void);
+extern void _savegpr_20(void);
+extern void _savegpr_21(void);
+extern void _savegpr_22(void);
+extern void _savegpr_23(void);
+extern void _savegpr_24(void);
+extern void _savegpr_25(void);
+extern void _savegpr_26(void);
+extern void _savegpr_27(void);
+extern void _restgpr_14(void);
+extern void _restgpr_15(void);
+extern void _restgpr_16(void);
+extern void _restgpr_17(void);
+extern void _restgpr_18(void);
+extern void _restgpr_19(void);
+extern void _restgpr_20(void);
+extern void _restgpr_21(void);
+extern void _restgpr_22(void);
+extern void _restgpr_23(void);
+extern void _restgpr_24(void);
+extern void _restgpr_25(void);
+extern void _restgpr_26(void);
+extern void _restgpr_27(void);
+extern void __div2u(void);
+extern void __div2i(void);
+extern void __mod2u(void);
+extern void __mod2i(void);
+extern void __shl2i(void);
+extern void __shr2u(void);
+extern void __shr2i(void);
+void __cvt_dbl_ull(void);
+unsigned long __cvt_fp2unsigned(double d);
+void __dl__FPv(void*);
+}
+/* #line 104 "decomp.h" */	/* stack depth 1 */
+/* #line 5 "GeoObject.hpp" */	/* stack depth 0 */
+/* #line 1 "CourseMap.hpp" */	/* stack depth 1 */
+/* #line 1 "stddef.h" */	/* stack depth 2 */
+/* #line 7 "CourseMap.hpp" */	/* stack depth 1 */
+extern "C" {
+void createInstance__Q26System9CourseMapFv(void) ;
+void destroyInstance__Q26System9CourseMapFv(void) ;
+void __ct__Q25Field9CourseMapFv(void) ;
+void __dt__Q25Field9CourseMapFv(void) ;
+void CourseMap_init(void) ;
+void loadFile__Q26System9CourseMapFlPCc(void) ;
+void CourseMapHeader_ct(void) ;
+void unk_80512c6c(void) ;
+void unk_80512c78(void) ;
+void unk_80512c94(void) ;
+void unk_80512c9c(void) ;
+void setIndex__Q26System15MapdataAreaBaseFUs(void) ;
+void getAreaCount__Q26System9CourseMapCFv(void) ;
+void unk_80512cd0(void) ;
+void unk_80512cec(void) ;
+void unk_80512d08(void) ;
+void unk_80512d24(void) ;
+void Stageinfo_isNarrowMode(void) ;
+void unk_80512d4c(void) ;
+void unk_80512d58(void) ;
+void parseStage__Q26System9CourseMapFUl(void) ;
+void parseMissionPoints__Q26System9CourseMapFUl(void) ;
+void parseCannonPoints__Q26System9CourseMapFUl(void) ;
+void parseJugemPoints__Q26System9CourseMapFUl(void) ;
+void parseCameras__Q26System9CourseMapFUl(void) ;
+void parseAreas__Q26System9CourseMapFUl(void) ;
+void parsePointInfo__Q26System9CourseMapFUl(void) ;
+void parseGeoObjs__Q26System9CourseMapFUl(void) ;
+void unk_80513600(void) ;
+void KmpHolder_parseCheckpoints(void) ;
+void KmpHolder_parseCheckpaths(void) ;
+void parseItemPoints__Q26System9CourseMapFUl(void) ;
+void parseItemPaths__Q26System9CourseMapFUl(void) ;
+void parseEnemyPoints__Q26System9CourseMapFUl(void) ;
+void parseEnemyPaths__Q26System9CourseMapFUl(void) ;
+void parseKartpoints__Q26System9CourseMapFUl(void) ;
+void get__Q26System19MapdataAreaAccessorCFUs(void) ;
+void unk_80514100(void) ;
+void KartpointHolder_getKartpoint(void) ;
+void KmpHolder_getGlobalObj(void) ;
+void getPointInfo__Q26System13MapdataGeoObjCFv(void) ;
+void findSection__Q26System19MapdataFileAccessorCFUl(void) ;
+void __ct__Q26System25MapdataStartPointAccessorFPCQ26System16KmpSectionHeader(void)    ;
+void unk_80514368(void) ;
+void unk_80514794(void) ;
+void VEC3_fromNeg(void) ;
+void VEC3_fromQuaternionRotated(void) ;
+void Vec3_scale(void) ;
+void Vec3_add(void) ;
+void VEC3_sub(void) ;
+void unk_805148a0(void) ;
+void unk_80514b24(void) ;
+void getStartPoint__Q26System9CourseMapCFUs(void) ;
+void getEnemyPoint__Q26System9CourseMapCFUs(void) ;
+void getEnemyPath__Q26System9CourseMapCFUs(void) ;
+void unk_80514c30(void) ;
+void getItemPoint__Q26System9CourseMapCFUs(void) ;
+void getItemPath__Q26System9CourseMapCFUs(void) ;
+void unk_80514df0(void) ;
+void CheckpathHolder_findCheckpathForCheckpoint(void) ;
+void unk_80515098(void) ;
+void unk_805150e0(void) ;
+void CheckpointHolder_init(void) ;
+void Checkpoint_parse(void) ;
+void unk_805155e0(void) ;
+void unk_805155e4(void) ;
+void unk_80515624(void) ;
+void unk_80515a6c(void) ;
+void getCheckPoint__Q26System9CourseMapCFUs(void) ;
+void getCheckPath__Q26System9CourseMapCFUs(void) ;
+void unk_80515cbc(void) ;
+void unk_80515d3c(void) ;
+void getPointInfo__Q26System9CourseMapCFUs(void) ;
+void __ct__Q26System19MapdataAreaAccessorFPCQ26System16KmpSectionHeader(void)    ;
+void unk_80515f8c(void) ;
+void __ct__Q26System15MapdataAreaBaseFPCQ36System15MapdataAreaBase5SData(void)    ;
+void isInside__Q26System15MapdataAreaBaseCFRCQ23EGG8Vector3f(void) ;
+void getRouteId__Q26System15MapdataAreaBaseCFv(void) ;
+void unk_80516168(void) ;
+void AreaBox_construct(void) ;
+void unk_805163b4(void) ;
+void isInsideShape__Q26System14MapdataAreaBoxCFRCQ23EGG8Vector3f(void) ;
+void AreaCylinder_construct(void) ;
+void isInsideShape__Q26System19MapdataAreaCylinderCFRCQ23EGG8Vector3f(void)    ;
+void getArea__Q26System9CourseMapCFUs(void) ;
+void getAreaByPriority__Q26System9CourseMapCFUs(void) ;
+void unk_80516808(void) ;
+void unk_80516a60(void) ;
+void getCamera__Q26System9CourseMapCFUs(void) ;
+void unk_80516bfc(void) ;
+void unk_80516cd4(void) ;
+void isNonPrivateBattle__Q26System17MapdataEnemyPointFv(void) ;
+void unk_80516d74(void) ;
+void unk_80517590(void) ;
+void unk_8051760c(void) ;
+void unk_80517670(void) ;
+void unk_805176ec(void) ;
+void unk_80517750(void) ;
+void unk_80517858(void) ;
+void unk_80517ce4(void) ;
+void unk_80517d38(void) ;
+void unk_80517d8c(void) ;
+void unk_80517e88(void) ;
+void unk_805181f0(void) ;
+void unk_80518268(void) ;
+void unk_805182cc(void) ;
+void unk_80518344(void) ;
+void __ct__Q26System17MapdataJugemPointFPCQ36System17MapdataJugemPoint5SData(void)    ;
+void unk_805184fc(void) ;
+void getJugemPoint__Q26System9CourseMapCFUs(void) ;
+void unk_8051896c(void) ;
+void Vec3_fromScale(void) ;
+void getCannonPoint__Q26System9CourseMapCFUs(void) ;
+void getMissionPoint__Q26System9CourseMapCFUs(void) ;
+void getStage__Q26System9CourseMapCFv(void) ;
+void getFlareAlpha__Q26System12MapdataStageCFv(void) ;
+void __dt__Q26System19MapdataAreaAccessorFv(void) ;
+void __dt__Q26System17MapdataEnemyPointFv(void) ;
+}
+/* #line 1 "eggVector.hpp" */	/* stack depth 2 */
+/* #line 1 "eggMath.hpp" */	/* stack depth 3 */
+namespace EGG {
+namespace Mathf {
+float sqrt(float);
+float frsqrt(float);
+float sin(float);
+float cos(float);
+}
+}
+/* #line 8 "eggVector.hpp" */	/* stack depth 2 */
+/* #line 1 "mathTypes.hpp" */	/* stack depth 3 */
+/* #line 1 "mtx.h" */	/* stack depth 4 */
+extern "C" {
+typedef struct {
+  f32 x, y, z;
+} Vec;
+typedef struct {
+  f32 x, y;
+} Vec2;
+typedef f32 Mtx[3][4];
+typedef f32 (*MtxPtr)[4];
+typedef f32 Mtx44[4][4];
+typedef f32 (*Mtx44Ptr)[4];
+typedef struct {
+  f32 x, y, z, w;
+} Quaternion;
+void PSMTXIdentity(Mtx);
+void PSMTXCopy(const Mtx, Mtx);
+void PSMTXConcat(const Mtx, const Mtx, Mtx);
+void PSMTXConcatArray(const Mtx, const Mtx*, Mtx*, u32);
+u32 PSMTXInverse(const Mtx, Mtx);
+u32 PSMTXInvXpose(const Mtx, Mtx);
+void PSMTXRotRad(Mtx, char, f32);
+void PSMTXRotTrig(Mtx, char, f32, f32);
+void __PSMTXRotAxisRadInternal(Mtx, const Vec*, f32, f32);
+void PSMTXRotAxisRad(Mtx, const Vec*, f32);
+void PSMTXTrans(Mtx, f32, f32, f32);
+void PSMTXTransApply(const Mtx, Mtx, f32, f32, f32);
+void PSMTXScale(Mtx, f32, f32, f32);
+void PSMTXScaleApply(const Mtx, Mtx, f32, f32, f32);
+void PSMTXQuat(Mtx m, const Quaternion*);
+void C_MTXLookAt(Mtx, const Vec*, const Vec*, const Vec*);
+void C_MTXLightFrustum(Mtx, f32, f32, f32, f32, f32, f32, f32, f32, f32);
+void C_MTXLightPerspective(Mtx, f32, f32, f32, f32, f32, f32);
+void C_MTXLightOrtho(Mtx, f32, f32, f32, f32, f32, f32, f32, f32);
+void PSMTXMultVec(const Mtx, const Vec*, Vec*);
+void PSMTXMultVecSR(const Mtx, const Vec*, Vec*);
+void C_MTXFrustum(Mtx44, f32, f32, f32, f32, f32, f32);
+void C_MTXPerspective(Mtx44, f32, f32, f32, f32);
+void C_MTXOrtho(Mtx44, f32, f32, f32, f32, f32, f32);
+void PSVECAdd(const Vec*, const Vec*, Vec*);
+void PSVECScale(const Vec*, Vec*, f32);
+void PSVECNormalize(const Vec*, Vec*);
+f32 PSVECMag(const Vec*);
+f32 PSVECDotProduct(const Vec*, const Vec*);
+void PSVECCrossProduct(const Vec*, const Vec*, Vec*);
+void C_VECHalfAngle(const Vec*, const Vec*, Vec*);
+f32 PSVECSquareDistance(const Vec*, const Vec*);
+void PSQUATMultiply(const Quaternion*, const Quaternion*, Quaternion*);
+void PSQUATScale(const Quaternion*, Quaternion*, f32);
+f32 PSQUATDotProduct(const Quaternion*, const Quaternion*);
+void PSQUATNormalize(const Quaternion*, Quaternion*);
+void PSQUATInverse(const Quaternion*, Quaternion*);
+void C_QUATMtx(Quaternion*, const Mtx);
+void C_QUATLerp(const Quaternion*, const Quaternion*, Quaternion*, f32);
+void C_QUATSlerp(const Quaternion*, const Quaternion*, Quaternion*, f32);
+}
+/* #line 5 "mathTypes.hpp" */	/* stack depth 3 */
+namespace nw4r {
+namespace math {
+struct _VEC2 {
+  f32 x;
+  f32 y;
+};
+struct _VEC3 {
+  f32 x;
+  f32 y;
+  f32 z;
+};
+struct __MTX33 {
+  f32 _00, _01, _02;
+  f32 _10, _11, _12;
+  f32 _20, _21, _22;
+};
+struct _MTX33 {
+  union {
+    struct __MTX33 e;
+    f32 arr[9];
+    f32 mtx[3][3];
+  };
+};
+struct __MTX34 {
+  f32 _00, _01, _02, _03;
+  f32 _10, _11, _12, _13;
+  f32 _20, _21, _22, _23;
+};
+struct _MTX34 {
+  union {
+    struct __MTX34 e;
+    f32 arr[12];
+    f32 mtx[3][4];
+  };
+};
+struct _MTX44 {
+  f32 arr[16];
+};
+struct VEC2;
+struct VEC3;
+struct MTX34;
+struct MTX44;
+struct VEC3 : public _VEC3 {
+public:
+  VEC3() {}
+  operator f32*() { return &x; }
+  operator const f32*() const { return &x; }
+  operator Vec*() { return (Vec*)&x; }
+  operator const Vec*() const { return (const Vec*)&x; }
+  bool operator==(const VEC3& o) const {
+    return x == o.x && y == o.y && z == o.z;
+  }
+  bool operator!=(const VEC3& o) const {
+    return x != o.x || y != o.y || z != o.z;
+  }
+};
+struct VEC2 : public _VEC2 {
+  bool operator==(const VEC3& o) const { return x == o.x && y == o.y; }
+  bool operator!=(const VEC3& o) const { return x != o.x || y != o.y; }
+};
+class MTX33 : public _MTX33 {
+public:
+  MTX33() {}
+  MTX33(const f32* p);
+  MTX33(const MTX34& rhs);
+  MTX33(f32 x00, f32 x01, f32 x02, f32 x10, f32 x11, f32 x12, f32 x20, f32 x21,
+        f32 x22) {
+    e._00 = x00;
+    e._01 = x01;
+    e._02 = x02;
+    e._10 = x10;
+    e._11 = x11;
+    e._12 = x12;
+    e._20 = x20;
+    e._21 = x21;
+    e._22 = x22;
+  }
+  operator f32*() { return &e._00; }
+  operator const f32*() const { return &e._00; }
+};
+struct MTX34 : public _MTX34 {
+public:
+  typedef f32 (*MtxPtr)[4];
+  typedef const f32 (*ConstMtxPtr)[4];
+public:
+  MTX34() {}
+  operator f32*() { return &e._00; }
+  operator const f32*() const { return &e._00; }
+  operator MtxPtr() { return (MtxPtr)&e._00; }
+  operator ConstMtxPtr() const { return (ConstMtxPtr)&e._00; }
+};
+struct MTX44 : public _MTX44 {
+public:
+  typedef f32 (*Mtx44Ptr)[4];
+  typedef const f32 (*ConstMtx44Ptr)[4];
+public:
+  MTX44() {}
+  operator f32*() { return &arr[0]; }
+  operator const f32*() const { return &arr[0]; }
+  operator Mtx44Ptr() { return (Mtx44Ptr)&arr[0]; }
+  operator ConstMtx44Ptr() const { return (ConstMtx44Ptr)&arr[0]; }
+};
+MTX33* MTX33Identity(MTX33*);
+MTX33* MTX34ToMTX33(MTX33*, const MTX34*);
+u32 MTX34InvTranspose(MTX33*, const MTX34*);
+MTX34* MTX34Zero(MTX34*);
+MTX34* MTX34Mult(MTX34*, const MTX34*, f32);
+MTX34* MTX34Scale(MTX34*, const MTX34*, const VEC3*);
+MTX34* MTX34Trans(MTX34*, const MTX34*, const VEC3*);
+MTX34* MTX34MAdd(MTX34*, f32, const MTX34*, const MTX34*);
+MTX34* MTX34RotAxisFIdx(MTX34*, const VEC3*, f32);
+MTX44* MTX44Copy(MTX44*, MTX44*);
+}
+}
+/* #line 9 "eggVector.hpp" */	/* stack depth 2 */
+namespace EGG {
+struct Vector2f {
+  float x;
+  float y;
+  float normalise();
+  void normalise2();
+  static Vector2f zero;
+  static const Vector2f ex, ey;
+  inline Vector2f(float _x, float _y) : x(_x), y(_y) {}
+  inline Vector2f() {}
+  ~Vector2f();
+};
+struct Vector3f : public nw4r::math::VEC3 {
+  float dot() const { return x * x + y * y + z * z; }
+  float normalise();
+  void normalise2();
+  static const Vector3f zero;
+  static const Vector3f ex, ey, ez;
+  inline Vector3f(float _x, float _y, float _z) {
+    x = _x;
+    y = _y;
+    z = _z;
+  }
+  inline Vector3f() {}
+  inline Vector3f(const nw4r::math::VEC3& v) {
+    x = v.x;
+    y = v.y;
+    z = v.z;
+  }
+  Vector3f operator-() const { return Vector3f(-x, -y, -z); }
+  Vector3f operator-(const Vector3f& rhs) const {
+    return Vector3f(x - rhs.x, y - rhs.y, z - rhs.y);
+  }
+  Vector3f operator+(const Vector3f& rhs) const {
+    return Vector3f(x + rhs.x, y + rhs.y, z + rhs.z);
+  }
+  Vector3f operator*(float scalar) const {
+    return Vector3f(x * scalar, y * scalar, z * scalar);
+  }
+  Vector3f cross(EGG::Vector3f& rhs) const {
+    return Vector3f(y * rhs.z - z * rhs.y, z * rhs.x - x * rhs.z,
+                    x * rhs.y - y * rhs.x);
+  }
+  ~Vector3f();
+};
+}
+/* #line 259 "CourseMap.hpp" */	/* stack depth 1 */
+/* #line 1 "eggQuat.hpp" */	/* stack depth 2 */
+namespace EGG {
+class Quatf {
+public:
+  void set(float a, float b, float c, float d);
+  void setRPY(const Vector3f& euler);
+  void setRPY(float r, float p, float y);
+  void setAxisRotation(const Vector3f& axis, float angle);
+  float squareNorm();
+  void normalise();
+  Quatf inverse();
+  void rotateVector(const Vector3f& v);
+  void rotateVectorInv(const Vector3f& v);
+  void slerpTo(const Quatf& r4, float, Quatf& r5) const;
+  void makeVectorRotation(Vector3f& v0, Vector3f& v1);
+  f32 _[4];
+};
+Quatf operator*(const Quatf&, const Vector3f&);
+}
+/* #line 260 "CourseMap.hpp" */	/* stack depth 1 */
+namespace System {
+struct KmpSectionHeader {
+  s32 sectionMagic;
+  u16 entryCount;
+  const s8 extraValue;
+};
+template <typename T, typename TData> class MapdataAccessorBase {
+public:
+  T** entries;
+  u16 numEntries;
+  const KmpSectionHeader* sectionHeader;
+  MapdataAccessorBase(const KmpSectionHeader* header)
+      : entries(0 ), numEntries(0), sectionHeader(header) {}
+  T* get(u16 i) const {
+    return i < this->numEntries ? this->entries[i] : 0 ;
+  }
+  s8 getExtraValue() const;
+  u16 size() const { return numEntries; }
+  inline void init(const TData* start, u16 count) {
+    if (count != 0) {
+      numEntries = count;
+      entries = new T*[count];
+    }
+    for (u16 i = 0; i < count; i++) {
+      entries[i] = new T(&start[i]);
+    }
+  }
+};
+__static_assert(sizeof(MapdataAccessorBase<unk, unk>) == 0xc,"sizeof(MapdataAccessorBase<unk, unk>) == 0xc") ;
+class MapdataPointInfo {
+public:
+  struct SData {
+    struct Point {
+      EGG::Vector3f pos;
+      u16 settings[2];
+    };
+    u16 pointCount;
+    u8 settings[2];
+    Point points[];
+  };
+  MapdataPointInfo(const SData* data) : mpData(data) {}
+private:
+  const SData* mpData;
+};
+__static_assert(sizeof(MapdataPointInfo) == 0x4,"sizeof(MapdataPointInfo) == 0x4") ;
+class MapdataCamera {
+public:
+  struct SData {
+    u8 cameraType;
+    u8 cameraNext;
+    u8 cameraShake;
+    u8 pathID;
+    u16 pathSpeed;
+    u16 fovYSpeed;
+    u16 viewSpeed;
+    u8 startFlag;
+    u8 movieFlag;
+    EGG::Vector3f position;
+    EGG::Vector3f rotation;
+    f32 fovYStart;
+    f32 fovVYEnd;
+    EGG::Vector3f viewStart;
+    EGG::Vector3f viewEnd;
+    f32 time;
+  };
+  MapdataCamera(const SData* data) : mpData(data) {}
+  u8 getCameraType() const;
+private:
+  const SData* mpData;
+};
+__static_assert(sizeof(MapdataCamera) == 0x4,"sizeof(MapdataCamera) == 0x4") ;
+class MapdataCannonPoint {
+public:
+  struct SData {
+    EGG::Vector3f position;
+    EGG::Vector3f rotation;
+    u16 id;
+    u16 shootEffect;
+  };
+  MapdataCannonPoint(const SData* data) : mpData(data) {}
+private:
+  const SData* mpData;
+};
+__static_assert(sizeof(MapdataCannonPoint) == 0x4,"sizeof(MapdataCannonPoint) == 0x4") ;
+class MapdataCheckPath {
+public:
+  struct SData {
+    u8 start;
+    u8 size;
+    u8 last[6];
+    u8 next[6];
+  };
+  MapdataCheckPath(const SData* data);
+private:
+  SData* mpData;
+  u8 _04[0x0c - 0x04];
+};
+__static_assert(sizeof(MapdataCheckPath) == 0xc,"sizeof(MapdataCheckPath) == 0xc") ;
+class MapdataCheckPoint;
+struct LinkedCheckpoint {
+  MapdataCheckPoint* checkpoint;
+  EGG::Vector2f p0diff;
+  EGG::Vector2f p1diff;
+  f32 distance;
+};
+class MapdataCheckPoint {
+public:
+  struct SData {
+    EGG::Vector2f left;
+    EGG::Vector2f right;
+    u8 jugemIndex;
+    u8 lapCheck;
+    u8 prevPt;
+    u8 nextPt;
+  };
+  enum Completion {
+    Completion_0,
+    Completion_1,
+    Completion_2,
+  };
+  MapdataCheckPoint(const SData* data);
+  Completion checkSectorAndDistanceRatio(const EGG::Vector3f& pos,
+                                         f32* distanceRatio) const;
+  bool isPlayerFlagged(s32 playerIdx) const { return mFlags & 1 << playerIdx; }
+  void setPlayerFlags(s32 playerIdx) { mFlags |= 1 << playerIdx; }
+  void resetFlags() { mFlags = 0; }
+  SData* data() const { return mpData; }
+  s32 nextCount() const { return mNextCount; }
+  s32 prevCount() const { return mPrevCount; }
+  s32 id() const { return mId; }
+  MapdataCheckPoint* prevPoint(s32 i) const { return mpPrevPoints[i]; }
+  const LinkedCheckpoint& nextPoint(s32 i) const { return mNextPoints[i]; }
+private:
+  bool checkSector(const LinkedCheckpoint& next, const EGG::Vector2f& p0,
+                   const EGG::Vector2f& p1) const;
+  bool checkDistanceRatio(const LinkedCheckpoint& next, const EGG::Vector2f& p0,
+                          const EGG::Vector2f& p1, f32* distanceRatio) const;
+  Completion checkSectorAndDistanceRatio_(const LinkedCheckpoint& next,
+                                          const EGG::Vector2f& p0,
+                                          const EGG::Vector2f& p1,
+                                          f32* distanceRatio) const;
+  SData* mpData;
+  u16 mNextCount;
+  u16 mPrevCount;
+  EGG::Vector2f mMidpoint;
+  EGG::Vector2f mDir;
+  u16 mFlags;
+  u16 mId;
+  u8 _1c[0x20 - 0x1c];
+  MapdataCheckPoint* mpPrevPoints[6];
+  LinkedCheckpoint mNextPoints[6];
+};
+__static_assert(sizeof(MapdataCheckPoint) == 0xc8,"sizeof(MapdataCheckPoint) == 0xc8") ;
+class MapdataEnemyPath {
+public:
+  struct SData {
+    u8 start;
+    u8 size;
+    u8 last[6];
+    u8 next[6];
+    u8 battle_params[2];
+  };
+  MapdataEnemyPath(const SData* data) : mpData(data) {}
+private:
+  const SData* mpData;
+  u8 _04[0x0c - 0x04];
+};
+__static_assert(sizeof(MapdataEnemyPath) == 0xc,"sizeof(MapdataEnemyPath) == 0xc") ;
+class MapdataEnemyPoint {
+public:
+  struct SData {
+    EGG::Vector3f position;
+    f32 deviation;
+    u8 parameters[4];
+  };
+  MapdataEnemyPoint(const SData* data) : _08(0 ), _0c(0 ), _14(-1) {
+    mpData = data;
+  }
+  virtual ~MapdataEnemyPoint();
+private:
+  static bool isNonPrivateBattle();
+  const SData* mpData;
+  unk* _08;
+  unk* _0c;
+  u8 _10[0x10 - 0x0c];
+  u8 _14;
+};
+__static_assert(sizeof(MapdataEnemyPoint) == 0x18,"sizeof(MapdataEnemyPoint) == 0x18") ;
+class MapdataGeoObj {
+public:
+  struct SData {
+    u16 id;
+    EGG::Vector3f translation;
+    EGG::Vector3f rotation;
+    EGG::Vector3f scale;
+    s16 pathId;
+    u16 settings[8];
+    u16 presenceFlag;
+  };
+  struct Vec3 {
+    f32 x, y, z;
+    inline Vec3(float _x, float _y, float _z) : x(_x), y(_y), z(_z) {}
+  };
+  MapdataGeoObj(const SData* data) : mpData(data) {
+    Vec3 _(mpData->translation.x, mpData->translation.y, mpData->translation.z);
+  }
+  MapdataPointInfo* getPointInfo() const;
+private:
+  const SData* mpData;
+};
+__static_assert(sizeof(MapdataGeoObj) == 0x4,"sizeof(MapdataGeoObj) == 0x4") ;
+class MapdataItemPath {
+public:
+  struct SData {
+    u8 start;
+    u8 size;
+    u8 last[6];
+    u8 next[6];
+    u16 _0e;
+  };
+  MapdataItemPath(const SData* data) : mpData(data) {}
+private:
+  const SData* mpData;
+};
+__static_assert(sizeof(MapdataItemPath) == 0x4,"sizeof(MapdataItemPath) == 0x4") ;
+class MapdataItemPoint {
+public:
+  struct SData {
+    EGG::Vector3f position;
+    f32 deviation;
+    u16 parameters[2];
+  };
+  MapdataItemPoint(const SData* data) : mpData(data) {}
+private:
+  const SData* mpData;
+  u8 _04[0x14 - 0x04];
+};
+__static_assert(sizeof(MapdataItemPoint) == 0x14,"sizeof(MapdataItemPoint) == 0x14") ;
+class MapdataJugemPoint {
+public:
+  struct SData {
+    EGG::Vector3f position;
+    EGG::Vector3f rotation;
+    u16 id;
+    s16 range;
+  };
+  MapdataJugemPoint(const SData* data);
+  virtual ~MapdataJugemPoint();
+private:
+  SData* mpData;
+  u8 _08[0x30 - 0x08];
+};
+__static_assert(sizeof(MapdataJugemPoint) == 0x30,"sizeof(MapdataJugemPoint) == 0x30") ;
+class MapdataMissionPoint {
+public:
+  struct SData {
+    EGG::Vector3f position;
+    EGG::Vector3f rotation;
+    u16 id;
+  };
+  MapdataMissionPoint(const SData* data) : mpData(data) {}
+private:
+  const SData* mpData;
+};
+__static_assert(sizeof(MapdataMissionPoint) == 0x4,"sizeof(MapdataMissionPoint) == 0x4") ;
+class MapdataStage {
+public:
+  struct SData {
+    u8 mLapCount;
+    u8 mPolePosition;
+    u8 mStartConfig;
+    bool mFlareToggle;
+    u32 mFlareColor;
+    u8 mFlareAlpha;
+  };
+  MapdataStage(const SData* data) : mpData(data) {}
+  u8 getStartConfig() const;
+  u8 getFlareAlpha() const;
+  u32 getFlareColor() const;
+  bool flareToggleEnabled() const;
+private:
+  const SData* mpData;
+};
+__static_assert(sizeof(MapdataStage) == 0x4,"sizeof(MapdataStage) == 0x4") ;
+class MapdataStartPoint {
+public:
+  struct SData {
+    EGG::Vector3f position;
+    EGG::Vector3f rotation;
+    s16 playerIndex;
+  };
+  MapdataStartPoint(const SData* data) : mpData(data) {}
+private:
+  const SData* mpData;
+  s8 mEnemyPoint;
+};
+__static_assert(sizeof(MapdataStartPoint) == 0x8,"sizeof(MapdataStartPoint) == 0x8") ;
+class MapdataAreaBase {
+public:
+  struct SData {
+    u8 shape;
+    u8 type;
+    s8 cameraIdx;
+    u8 priority;
+    EGG::Vector3f position;
+    EGG::Vector3f rotation;
+    EGG::Vector3f scale;
+    u16 parameters[2];
+    u8 railID;
+    u8 eneLinkID;
+  };
+  MapdataAreaBase(const SData* data);
+  virtual bool isInsideShape(const EGG::Vector3f& pos) const = 0;
+  s32 getRouteId() const;
+  MapdataPointInfo* getPointInfo() const;
+  bool isInside(const EGG::Vector3f& pos) const;
+  void setIndex(u16 idx);
+protected:
+  const SData* mpData;
+  EGG::Vector3f mXAxis;
+  EGG::Vector3f mYAxis;
+  EGG::Vector3f mZAxis;
+  EGG::Vector3f mDims;
+  f32 mEllipseXRadiusSq;
+  f32 mEllipseAspectRatio;
+  f32 mBoundingSphereRadiusSq;
+  s16 mIndex;
+};
+__static_assert(sizeof(MapdataAreaBase) == 0x48,"sizeof(MapdataAreaBase) == 0x48") ;
+class MapdataAreaBox : public MapdataAreaBase {
+public:
+  MapdataAreaBox(const SData* data);
+  virtual bool isInsideShape(const EGG::Vector3f& pos) const;
+};
+class MapdataAreaCylinder : public MapdataAreaBase {
+public:
+  MapdataAreaCylinder(const SData* data);
+  virtual bool isInsideShape(const EGG::Vector3f& pos) const;
+};
+class MapdataAreaAccessor {
+public:
+  MapdataAreaAccessor(const KmpSectionHeader* header);
+  u16 size() const { return numEntries; }
+  MapdataAreaBase* get(u16 i) const;
+  MapdataAreaBase* getByPriority(u16 i) const {
+    if (i < numEntries && this->byPriority) {
+      return this->byPriority[i];
+    }
+    return 0 ;
+  }
+  MapdataAreaBase** entries;
+  u16 numEntries;
+  virtual ~MapdataAreaAccessor();
+  const KmpSectionHeader* sectionHeader;
+private:
+  MapdataAreaBase** byPriority;
+};
+__static_assert(sizeof(MapdataAreaAccessor) == 0x14,"sizeof(MapdataAreaAccessor) == 0x14") ;
+__static_assert(((size_t) & (((MapdataAreaAccessor*)0)-> entries)) == 0x0,"offsetof(MapdataAreaAccessor, entries) == 0x0") ;
+class MapdataCameraAccessor
+    : public MapdataAccessorBase<MapdataCamera, MapdataCamera::SData> {
+public:
+  MapdataCameraAccessor(const KmpSectionHeader* header)
+      : MapdataAccessorBase<MapdataCamera, MapdataCamera::SData>(header) {
+    init((const MapdataCamera::SData*)(sectionHeader + 1),
+         sectionHeader->entryCount);
+  }
+  s8 getExtraValue() const;
+};
+class MapdataCannonPointAccessor
+    : public MapdataAccessorBase<MapdataCannonPoint,
+                                 MapdataCannonPoint::SData> {
+public:
+  MapdataCannonPointAccessor(const KmpSectionHeader* header)
+      : MapdataAccessorBase<MapdataCannonPoint, MapdataCannonPoint::SData>(
+            header) {
+    init((const MapdataCannonPoint::SData*)(sectionHeader + 1),
+         sectionHeader->entryCount);
+  }
+};
+class MapdataCheckPathAccessor
+    : public MapdataAccessorBase<MapdataCheckPath, MapdataCheckPath::SData> {
+private:
+  f32 _0c;
+};
+__static_assert(sizeof(MapdataCheckPathAccessor) == 0x10,"sizeof(MapdataCheckPathAccessor) == 0x10") ;
+class MapdataCheckPointAccessor
+    : public MapdataAccessorBase<MapdataCheckPoint, MapdataCheckPoint::SData> {
+private:
+  u8 _0c[0x14 - 0x0c];
+};
+__static_assert(sizeof(MapdataCheckPointAccessor) == 0x14,"sizeof(MapdataCheckPointAccessor) == 0x14") ;
+class MapdataEnemyPathAccessor
+    : public MapdataAccessorBase<MapdataEnemyPath, MapdataEnemyPath::SData> {
+public:
+  MapdataEnemyPathAccessor(const KmpSectionHeader* header)
+      : MapdataAccessorBase<MapdataEnemyPath, MapdataEnemyPath::SData>(header) {
+    init((const MapdataEnemyPath::SData*)(sectionHeader + 1),
+         sectionHeader->entryCount);
+  }
+};
+class MapdataEnemyPointAccessor
+    : public MapdataAccessorBase<MapdataEnemyPoint, MapdataEnemyPoint::SData> {
+public:
+  MapdataEnemyPointAccessor(const KmpSectionHeader* header)
+      : MapdataAccessorBase<MapdataEnemyPoint, MapdataEnemyPoint::SData>(
+            header) {
+    init((const MapdataEnemyPoint::SData*)(sectionHeader + 1),
+         sectionHeader->entryCount);
+  }
+};
+class MapdataGeoObjAccessor
+    : public MapdataAccessorBase<MapdataGeoObj, MapdataGeoObj::SData> {
+public:
+  MapdataGeoObjAccessor(const KmpSectionHeader* header)
+      : MapdataAccessorBase<MapdataGeoObj, MapdataGeoObj::SData>(header) {
+    init((const MapdataGeoObj::SData*)(sectionHeader + 1),
+         sectionHeader->entryCount);
+  }
+};
+class MapdataItemPathAccessor
+    : public MapdataAccessorBase<MapdataItemPath, MapdataItemPath::SData> {
+public:
+  MapdataItemPathAccessor(const KmpSectionHeader* header)
+      : MapdataAccessorBase<MapdataItemPath, MapdataItemPath::SData>(header) {
+    init((const MapdataItemPath::SData*)(sectionHeader + 1),
+         sectionHeader->entryCount);
+  }
+};
+class MapdataItemPointAccessor
+    : public MapdataAccessorBase<MapdataItemPoint, MapdataItemPoint::SData> {
+public:
+  MapdataItemPointAccessor(const KmpSectionHeader* header)
+      : MapdataAccessorBase<MapdataItemPoint, MapdataItemPoint::SData>(header) {
+    init((const MapdataItemPoint::SData*)(sectionHeader + 1),
+         sectionHeader->entryCount);
+  }
+};
+class MapdataJugemPointAccessor
+    : public MapdataAccessorBase<MapdataJugemPoint, MapdataJugemPoint::SData> {
+public:
+  MapdataJugemPointAccessor(const KmpSectionHeader* header)
+      : MapdataAccessorBase<MapdataJugemPoint, MapdataJugemPoint::SData>(
+            header) {
+    init((const MapdataJugemPoint::SData*)(sectionHeader + 1),
+         sectionHeader->entryCount);
+  }
+  MapdataJugemPoint* get(u16 i) const;
+};
+class MapdataMissionPointAccessor
+    : public MapdataAccessorBase<MapdataMissionPoint,
+                                 MapdataMissionPoint::SData> {
+public:
+  MapdataMissionPointAccessor(const KmpSectionHeader* header)
+      : MapdataAccessorBase<MapdataMissionPoint, MapdataMissionPoint::SData>(
+            header) {
+    init((const MapdataMissionPoint::SData*)(sectionHeader + 1),
+         sectionHeader->entryCount);
+  }
+};
+class MapdataPointInfoAccessor
+    : public MapdataAccessorBase<MapdataPointInfo, MapdataPointInfo::SData> {
+public:
+  void init(u16 entryCount) {
+    if (entryCount != 0) {
+      numEntries = entryCount;
+      entries = new MapdataPointInfo*[entryCount];
+    }
+    if (numEntries != 0) {
+      u16 i = 0;
+      const MapdataPointInfo::SData* route =
+          (const MapdataPointInfo::SData*)sectionHeader + 2;
+      for (; i < numEntries; i++) {
+        entries[i] = new MapdataPointInfo(route);
+        route = route + route->pointCount * 4 + 1;
+      }
+    }
+  }
+  MapdataPointInfoAccessor(const KmpSectionHeader* header)
+      : MapdataAccessorBase<MapdataPointInfo, MapdataPointInfo::SData>(header) {
+    init(sectionHeader->entryCount);
+  }
+};
+class MapdataStageAccessor
+    : public MapdataAccessorBase<MapdataStage, MapdataStage::SData> {
+public:
+  MapdataStageAccessor(const KmpSectionHeader* header)
+      : MapdataAccessorBase<MapdataStage, MapdataStage::SData>(header) {
+    init((const MapdataStage::SData*)(sectionHeader + 1),
+         sectionHeader->entryCount);
+  }
+};
+class MapdataStartPointAccessor
+    : public MapdataAccessorBase<MapdataStartPoint, MapdataStartPoint::SData> {
+public:
+  MapdataStartPointAccessor(const KmpSectionHeader* header);
+  MapdataStartPoint* get(u16 i) const;
+};
+class MapdataFileAccessor {
+public:
+  struct SData {
+    u32 magic;
+    u32 fileSize;
+    u16 numSections;
+    u16 headerSize;
+    u32 revision;
+    s32 offsets[];
+  };
+  MapdataFileAccessor(const SData* data);
+  u32 getVersion() const;
+  const KmpSectionHeader* findSection(u32 sectionName) const;
+private:
+  const SData* mpData;
+  u32* mpSectionDef;
+  u32 mVersion;
+  u32 mSectionDefOffset;
+};
+__static_assert(sizeof(MapdataFileAccessor) == 0x10,"sizeof(MapdataFileAccessor) == 0x10") ;
+class CourseMap {
+public:
+  static CourseMap* createInstance();
+  static void destroyInstance();
+  static inline CourseMap* instance() { return spInstance; }
+  static void* loadFile(s32 archiveIdx, const char* filename);
+  inline u32 getVersion() const { return mpCourse->getVersion(); }
+  MapdataAreaBase* getArea(u16 i) const;
+  MapdataAreaBase* getAreaByPriority(u16 i) const;
+  MapdataCannonPoint* getCannonPoint(u16 i) const;
+  MapdataCamera* getCamera(u16 i) const;
+  MapdataCheckPoint* getCheckPoint(u16 i) const;
+  MapdataCheckPath* getCheckPath(u16 i) const;
+  MapdataEnemyPath* getEnemyPath(u16 i) const;
+  MapdataEnemyPoint* getEnemyPoint(u16 i) const;
+  MapdataGeoObj* getGeoObj(u16 i) const;
+  MapdataItemPoint* getItemPoint(u16 i) const;
+  MapdataItemPath* getItemPath(u16 i) const;
+  MapdataJugemPoint* getJugemPoint(u16 i) const;
+  MapdataMissionPoint* getMissionPoint(u16 i) const;
+  MapdataPointInfo* getPointInfo(u16 i) const;
+  MapdataStage* getStage() const;
+  MapdataStartPoint* getStartPoint(u16 i) const;
+  u16 getAreaCount() const;
+  u16 getCameraCount() const;
+  u16 getEnemyPointCount() const;
+  u16 getItemPointCount() const;
+  u16 getJugemPointCount() const;
+  u16 getStartPointCount() const;
+  MapdataAreaAccessor* parseAreas(u32 sectionName);
+  MapdataCameraAccessor* parseCameras(u32 sectionName);
+  MapdataCannonPointAccessor* parseCannonPoints(u32 sectionName);
+  MapdataEnemyPathAccessor* parseEnemyPaths(u32 sectionName);
+  MapdataEnemyPointAccessor* parseEnemyPoints(u32 sectionName);
+  MapdataGeoObjAccessor* parseGeoObjs(u32 sectionName);
+  MapdataItemPathAccessor* parseItemPaths(u32 sectionName);
+  MapdataItemPointAccessor* parseItemPoints(u32 sectionName);
+  MapdataJugemPointAccessor* parseJugemPoints(u32 sectionName);
+  MapdataStartPointAccessor* parseKartpoints(u32 sectionName);
+  MapdataMissionPointAccessor* parseMissionPoints(u32 sectionName);
+  MapdataPointInfoAccessor* parsePointInfo(u32 sectionName);
+  MapdataStageAccessor* parseStage(u32 sectionName);
+private:
+  CourseMap();
+  virtual ~CourseMap();
+  static CourseMap* spInstance;
+  MapdataFileAccessor* mpCourse;
+  MapdataStartPointAccessor* mpStartPoint;
+  MapdataEnemyPathAccessor* mpEnemyPath;
+  MapdataEnemyPointAccessor* mpEnemyPoint;
+  MapdataItemPathAccessor* mpItemPath;
+  MapdataItemPointAccessor* mpItemPoint;
+  MapdataCheckPathAccessor* mpCheckPath;
+  MapdataCheckPointAccessor* mpCheckPoint;
+  MapdataPointInfoAccessor* mpPointInfo;
+  MapdataGeoObjAccessor* mpGeoObj;
+  MapdataAreaAccessor* mpArea;
+  MapdataCameraAccessor* mpCamera;
+  MapdataJugemPointAccessor* mpJugemPoint;
+  MapdataCannonPointAccessor* mpCannonPoint;
+  MapdataStageAccessor* mpStageInfo;
+  MapdataMissionPointAccessor* mpMissionPoint;
+  void* mpGoalCamera;
+  void* mpType9Camera;
+  void* mpOpeningPanCamera;
+  unk _50;
+};
+}
+/* #line 6 "GeoObject.hpp" */	/* stack depth 0 */
+/* #line 1 "BoxColUnit.hpp" */	/* stack depth 1 */
+enum BoxColFlag {
+  BOXCOL_FLAG_DRIVER = 0x1,
+  BOXCOL_FLAG_ITEM = 0x2,
+  BOXCOL_FLAG_4 = 0x4,
+  BOXCOL_FLAG_8 = 0x8,
+  BOXCOL_FLAG_OBJECT = 0xC,
+  BOXCOL_FLAG_DRIVABLE = 0x10,
+  BOXCOL_FLAG_100 = 0x100,
+  BOXCOL_FLAG_DISABLED = 0x200,
+  BOXCOL_FLAG_STATIC = 0x400,
+  BOXCOL_FLAG_800 = 0x800,
+};
+struct BoxColUnit {
+  BoxColUnit();
+  ~BoxColUnit();
+  void set(const EGG::Vector3f* pos, u32 flags, void* userData, float radius,
+           float thickness);
+  void makeDynamic();
+  void resizeSphere(float radius, float thickness);
+  void _80786F98();
+  void _80786FA8();
+  const EGG::Vector3f* position;
+  f32 radius;
+  f32 range;
+  u32 flags;
+  void* userData;
+  u16 rightPointID;
+  u16 leftPointID;
+  f32 xMax;
+  f32 xMin;
+};
+/* #line 9 "GeoObject.hpp" */	/* stack depth 0 */
+extern "C" {
+voidNOWN_FUNCTION(Obj_construct);
+voidNOWN_FUNCTION(void_8081f9bc);
+voidNOWN_FUNCTION(void_8081fb04);
+voidNOWN_FUNCTION(Obj_vf0c);
+voidNOWN_FUNCTION(Object_loadGraphicsEx);
+voidNOWN_FUNCTION(void_8081fd00);
+voidNOWN_FUNCTION(Obj_loadGraphics);
+voidNOWN_FUNCTION(void_80820360);
+voidNOWN_FUNCTION(void_808204b8);
+voidNOWN_FUNCTION(void_808204fc);
+voidNOWN_FUNCTION(void_8082051c);
+voidNOWN_FUNCTION(void_8082053c);
+voidNOWN_FUNCTION(void_8082055c);
+voidNOWN_FUNCTION(void_8082057c);
+voidNOWN_FUNCTION(void_8082059c);
+voidNOWN_FUNCTION(void_808205bc);
+voidNOWN_FUNCTION(void_808205dc);
+voidNOWN_FUNCTION(Object_loadAnims);
+voidNOWN_FUNCTION(void_80820874);
+voidNOWN_FUNCTION(void_80820980);
+voidNOWN_FUNCTION(void_80820a90);
+voidNOWN_FUNCTION(void_80820eb8);
+voidNOWN_FUNCTION(Object_initRenderGroup);
+voidNOWN_FUNCTION(void_80821640);
+voidNOWN_FUNCTION(void_808216c0);
+voidNOWN_FUNCTION(void_80821738);
+voidNOWN_FUNCTION(void_808217b0);
+voidNOWN_FUNCTION(Obj_vf1c);
+voidNOWN_FUNCTION(void_808218b0);
+voidNOWN_FUNCTION(void_80821910);
+voidNOWN_FUNCTION(void_80821974);
+voidNOWN_FUNCTION(void_80821a9c);
+voidNOWN_FUNCTION(void_80821b68);
+voidNOWN_FUNCTION(void_80821db8);
+voidNOWN_FUNCTION(void_80821dd8);
+voidNOWN_FUNCTION(void_80821dec);
+voidNOWN_FUNCTION(void_80821e00);
+namespace Geo
+{
+    enum ObjectType{
+        OBJECT_TYPE_NORMAL = 0x0,
+        OBJECT_TYPE_COLLIDABLE = 0x1,
+        OBJECT_TYPE_SPECIAL = 0x2,
+    };
+	class GeoObject
+    {
+        explicit GeoObject(System::MapdataGeoObj * gobj);
+        GeoObject(u32 objectId, nw4r::math::VEC3 * position, nw4r::math::VEC3 * rotation, nw4r::math::VEC3 * scale);
+        GeoObject(const char * name, nw4r::math::VEC3 * position, nw4r::math::VEC3 * rotation, nw4r::math::VEC3 * scale);
+        virtual ~GeoObject();
+        virtual void Setup();
+        virtual void vf_0x10();
+        virtual void Update();
+        virtual void vf_0x18();
+        virtual void UpdateModel();
+        virtual void Init() = 0;
+        virtual int GetID() const;
+        virtual const char *GetName() const;
+        virtual bool HasLod();
+        virtual void *GetClipInfo() const;
+        virtual char *GetBRRESName() const;
+        virtual char *GetSubFileName() const;
+        virtual void *vf_0x3c();
+        virtual char *GetShadowResName() const;
+        virtual void LoadModels();
+        virtual void LoadModels(void *r4);
+        virtual void LoadGraphics(void *r4);
+        virtual void LoadShadow();
+        virtual void LoadSound();
+        virtual void LoadRenderer();
+        virtual void LoadAnimations();
+        virtual void LoadCollision() = 0;
+        virtual void LoadRoute();
+        virtual void InitModels(bool r4);
+        virtual void UpdateModelMatrix();
+        virtual void UpdateShadow();
+        virtual void UpdateCollision() = 0;
+        virtual void UpdateModelScale();
+        virtual void UpdateShadowScale();
+        virtual bool vf_0x80();
+        virtual bool vf_0x84();
+        virtual void vf_0x88();
+        virtual void vf_0x8c();
+        virtual void DisableCollision();
+        virtual void EnableCollision();
+        virtual int *GetDrawInfo() const;
+        virtual nw4r::math::VEC3 *GetPosition() const;
+        virtual float GetCollisionDiameter() const;
+        virtual bool IsLodDisbled();
+        virtual void vf_0xa8();
+        virtual void vf_0xac();
+        virtual u32 GetDrawType() const = 0;
+        ObjectType type;
+        void * mdlDirector;
+        void * mdlLodDirector;
+        void * mdlShadowDirector;
+        void * resFile;
+        void * objectSound;
+        void * clipInfo;
+        void * routeController;
+        BoxColUnit * entity;
+        const char * shadowName;
+        u16 flags;
+        nw4r::math::VEC3 pos;
+        nw4r::math::VEC3 scale;
+        nw4r::math::VEC3 rot;
+        const char * modelName;
+        nw4r::math::MTX34 matrix;
+        u16 id;
+        u16 useLowModel;
+        char * lowModelName;
+        u8 lodFlags;
+        u8 voidnown[3];
+        const char * lodModelName;
+        u8 voidnown2[3];
+        u8 hasModel;
+        u8 hasLodModel;
+        u8 uknown3[3];
+        System::MapdataGeoObj * gobj;
+        u32 holderIndex;
+        bool voidnown_0xa8;
+        u8 padding[3];
+    };
+}
+}
+
+compiler_flags:
+-nodefaults -align powerpc -enc SJIS -c -gccinc -i ./source/ -i ./source/platform -proc gekko -enum int -O4,p -inline auto -W all -fp hardware -Cpp_exceptions off -RTTI off -inline auto -w notinlined -W noimplicitconv -w nounwanted -nostdinc -msgstyle gcc -DREVOKART -func_align 4 -pragma "warning off(10178)"  -ipa file -rostr -str noreuse -use_lmw_stmw=on -sdata 0 -sdata2 0 -lang=c++ -pragma "legacy_struct_alignment on" -DREL

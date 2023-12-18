@@ -8,6 +8,7 @@ from argparse import ArgumentParser
 from pathlib import Path
 import os
 
+import json
 import requests
 
 from mkwutil.tools.create_ctx import get_ctx
@@ -40,10 +41,10 @@ else:
 
 # Get flags for binary
 if addr < 0x8050_0000:
-    preset = "Mario Kart Wii (DOL)"
+    preset = 'Mario Kart Wii (DOL)'
     disaser = get_dol_disaser()
 else:
-    preset = "Mario Kart Wii (REL)"
+    preset = 'Mario Kart Wii (REL)'
     disaser = get_rel_disaser()
 
 # Disassemble function
@@ -71,6 +72,14 @@ req = {
     "preset" : preset,
     "diff_label" : diff_label
 }
-r = requests.post(args.host + "/api/scratch", json=req)
+print("Target:")
+print(req['target_asm'])
+print("Context:")
+print(req['context'])
+print("compiler_flags:")
+print(req['compiler_flags'])
+
+# r = requests.post(args.host + "/api/scratch", json=json.dumps(req))
+# print(req['context'])
 assert r.status_code == 201, f"Bad status code {r.status_code}"
 print(args.host + r.json()["html_url"])

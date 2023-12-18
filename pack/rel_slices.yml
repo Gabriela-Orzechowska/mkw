@@ -112,6 +112,9 @@ source/game/ui/SectionDirector.cpp:
 source/game/geo/ObjKoopaFigure64.cpp:
     text: [0x806DA914, 0x806DB184]
 
+source/game/geo/GeoObject.cpp:
+    text: [0x8081f828, 0x80821e14]
+
 source/game/geo/ObjKuribo.cpp:
     text: [0x806DB184, 0x806DD2D8]
 
